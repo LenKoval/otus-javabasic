@@ -25,7 +25,7 @@ public class Main {
 
     public static void checkSign(int a, int b, int c) {
         int sum = a + b + c;
-        if(sum > 0 || sum == 0) {
+        if(sum >= 0) {
             System.out.println("Сумма положительная.");
         } else {
             System.out.println("Сумма отрицательная.");
@@ -33,10 +33,10 @@ public class Main {
     }
 
     public static void selectColor() {
-        int data = 12;
+        int data = 25;
         if (data < 10) {
             System.out.println("Красный");
-        } else if (data > 10 || data < 20) {
+        } else if (data > 10 && data < 20) {
             System.out.println("Желтый");
         } else {
             System.out.println("Зеленый");
@@ -62,11 +62,9 @@ public class Main {
     }
 
     public static void askUser() {
-        Random random = new Random();
-        boolean b = random.nextBoolean();
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число от 1 до 5");
+
         int result = scanner.nextInt();
         if(result == 1) {
             greetings();
@@ -77,6 +75,8 @@ public class Main {
         } else if (result == 4) {
             compareNumbers();
         } else {
+            Random random = new Random();
+            boolean b = random.nextBoolean();
             addOrSubtractAndPrint((int) (Math.random() * 20), (int) (Math.random() * 20), b);
         }
     }
