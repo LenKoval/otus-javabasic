@@ -33,10 +33,10 @@ public class Main {
     }
 
     public static void selectColor() {
-        int data = 25;
+        int data = 10;
         if (data < 10) {
             System.out.println("Красный");
-        } else if (data > 10 && data < 20) {
+        } else if (data >= 10 && data < 20) {
             System.out.println("Желтый");
         } else {
             System.out.println("Зеленый");
@@ -77,6 +77,7 @@ public class Main {
         } else {
             Random random = new Random();
             boolean b = random.nextBoolean();
+            //boolean b = Math.random() < 0.5;
             addOrSubtractAndPrint((int) (Math.random() * 20), (int) (Math.random() * 20), b);
         }
     }
