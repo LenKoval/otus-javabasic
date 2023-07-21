@@ -1,4 +1,5 @@
-package homework3.ElenaKovaleva;
+package homework2.ElenaKovaleva;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -11,16 +12,16 @@ public class HomeWorkTwo {
         fillArray(3, array);
         //System.out.println(Arrays.toString(array));
         incrementElement(2, array);
-        //System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(array));
         sumHalfAndPrint(array);
 
         //      *HWTwo
         int[] array1 = {1, 4, 6, 8, 3};
         int[] array2 = {3, 2, 1};
         int[] array3 = {1, 2, 2, 4};
-        //sumArraysAndPrint(array1, array2, array3);
+        sumArraysAndPrint(array1, array2, array3);
         checkArr(array1);
-        //askUserAndCheckNumbers(array3);
+        askUserAndCheckNumbers(array3);
         flipArray(array1);
 
     }
@@ -51,7 +52,7 @@ public class HomeWorkTwo {
 
     public static void incrementElement(int number, int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = arr[i] + number;
+            arr[i] += number;
         }
     }
 
@@ -79,26 +80,47 @@ public class HomeWorkTwo {
 
     //                 *HOMEWORK-TWO
 
-    /*public static void sumArraysAndPrint(int[] arr1, int[] arr2, int[] arr3) {
+    public static void sumArraysAndPrint(int[] arr1, int[] arr2, int[] arr3) {
         int[] sumArr;
-        if(arr1.length > arr2.length && arr1.length > arr3.length) {
+        int[] resultArr;
+
+        if(arr1.length >= arr2.length) {
             sumArr = new int[arr1.length];
-            for(int i = 0; i < sumArr.length; i++) {
-                sumArr[i] = arr1[i] + arr2[i] + arr3[i];
+            for (int i = 0; i < arr1.length; i++) {
+                sumArr[i] = arr1[i];
             }
-        } else if (arr2.length > arr1.length && arr2.length > arr3.length) {
-            sumArr = new int[arr2.length];
-            for(int i = 0; i < sumArr.length; i++) {
-                sumArr[i] = arr1[i] + arr2[i] + arr3[i];
+            for(int i = 0; i < arr2.length; i++) {
+                sumArr[i] += arr2[i];
             }
         } else {
-            sumArr = new int[arr3.length];
-            for(int i = 0; i < sumArr.length; i++) {
-                sumArr[i] = arr1[i] + arr2[i] + arr3[i];
+            sumArr = new int[arr2.length];
+            for (int i = 0; i < arr2.length; i++) {
+                sumArr[i] = arr2[i];
+            }
+            for (int i = 0; i < arr1.length; i++) {
+                sumArr[i] += arr1[i];
             }
         }
-        System.out.println(Arrays.toString(sumArr));
-    }*/
+
+        if(sumArr.length >= arr3.length) {
+            resultArr = new int[sumArr.length];
+            for (int i = 0; i < sumArr.length; i++) {
+                resultArr[i] = sumArr[i];
+            }
+            for (int i = 0; i < arr3.length; i++) {
+                resultArr[i] += arr3[i];
+            }
+        } else {
+            resultArr = new int[arr3.length];
+            for (int i = 0; i < arr3.length; i++) {
+                resultArr[i] = arr3[i];
+            }
+            for (int i = 0; i < sumArr.length; i++) {
+                resultArr[i] += sumArr[i];
+            }
+        }
+        System.out.println(Arrays.toString(resultArr));
+    }
 
     public static void checkArr(int[] arr) {
         int left = 0;
@@ -111,40 +133,60 @@ public class HomeWorkTwo {
             }
             if (left == right) {
                 System.out.println("Равенство между элементами массива найдено.");
+                break;
             }
             right = 0;
         }
     }
 
-    //добавить boolean для проверки?
-
-    /*public static void askUserAndCheckNumbers(int[] arr) {
+    public static void askUserAndCheckNumbers(int[] arr) {
+        boolean checkOne = false;
+        boolean checkTwo = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Выберите операцию для проверки: 1 - проверить, что все элементы массива идут в порядке убывания; " +
                 "2 - проверить, что все элементы массива идут в порядке возрастания.");
         int result = scanner.nextInt();
         if (result == 1) {
-            for (int i = 0; i < arr.length; i++) {
-                if (i >= i - 1) {
-                    System.out.println("Элементы массива идут в порядке убывания.");
+            for (int i = 1; i < arr.length - 1; i++) {
+                if (arr[i] <= arr[i - 1]) {
+                    checkOne = true;
                 } else {
-                    System.out.println("Элементы массива не идут в порядке убывания.");
+                    checkOne = false;
                 }
             }
-        } else if (result == 2) {
-            for (int i = 0; i < arr.length; i++) {
-                if (i <= i + 1) {
-                    System.out.println("Элементы массива идут в порядке возрастания.");
-                } else {
-                    System.out.println("Элементы массива не идут в порядке возрастания.");
-                }
+
+            if(checkOne == true && arr[0] >= arr [1]) {
+                System.out.println("Элементы в массиве расположены в порядке убывания.");
+            } else {
+                System.out.println("Массив не упорядочен.");
             }
         }
-    }*/
+
+        if (result == 2) {
+            for (int i = 1; i < arr.length - 1; i++) {
+                if (arr[i] >= arr[i - 1]) {
+                    checkTwo = true;
+                } else {
+                    checkTwo = false;
+                }
+            }
+
+            if(checkTwo == true && arr[0] <= arr[1]) {
+                System.out.println("Элементы в массиве расположены в порядке возрастания.");
+            } else {
+                System.out.println("Массив не упорядочен.");
+            }
+        }
+    }
 
     public static void flipArray(int[] arr) {
-        for(int i = arr.length - 1; i >= 0; i--) {
-            System.out.println(arr[i]);;
+        int[] flipArr = new int[arr.length];
+        for(int i = 0; i < arr.length; i++) {
+            flipArr[arr.length - 1 - i] = arr[i];
         }
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = flipArr[i];
+        }
+        System.out.println(Arrays.toString(arr));
     }
 }
