@@ -1,4 +1,4 @@
-package homework2.ElenaKovaleva;
+package homework2.elenakovaleva;
 
 import java.util.Arrays;
 import java.util.Scanner;
