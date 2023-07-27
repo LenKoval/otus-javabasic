@@ -17,11 +17,11 @@ public class HomeWorkTwo {
 
         //      *HWTwo
         int[] array1 = {1, 4, 6, 8, 3};
-        int[] array2 = {3, 2, 1};
-        int[] array3 = {1, 2, 3, 4};
+        int[] array2 = {3, 2, 1, 0};
+        int[] array3 = {1, 7, 3, 4};
         sumArraysAndPrint(array1, array2, array3);
         checkArr(array1);
-        askUserAndCheckNumbers(array2);
+        askUserAndCheckNumbers(array3);
         flipArray(array3);
 
     }
@@ -149,8 +149,10 @@ public class HomeWorkTwo {
         int result = scanner.nextInt();
         if (result == 1) {
             for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] >= arr[i + 1]) {
+                if (arr[i] - (arr[i + 1] + 1) == 0) {
                     checkRegular = true;
+                } else {
+                    break;
                 }
             }
             if (checkRegular == true) {
@@ -160,8 +162,10 @@ public class HomeWorkTwo {
 
         if (result == 2) {
             for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] <= arr[i + 1]) {
+                if (arr[i] - (arr[i + 1] - 1) == 0) {
                     checkRegular = true;
+                } else {
+                    break;
                 }
             }
             if (checkRegular == true) {
