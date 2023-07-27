@@ -18,11 +18,11 @@ public class HomeWorkTwo {
         //      *HWTwo
         int[] array1 = {1, 4, 6, 8, 3};
         int[] array2 = {3, 2, 1};
-        int[] array3 = {1, 2, 2, 4};
+        int[] array3 = {1, 2, 3, 4};
         sumArraysAndPrint(array1, array2, array3);
         checkArr(array1);
-        askUserAndCheckNumbers(array3);
-        flipArray(array1);
+        askUserAndCheckNumbers(array2);
+        flipArray(array3);
 
     }
 
@@ -140,52 +140,42 @@ public class HomeWorkTwo {
     }
 
     public static void askUserAndCheckNumbers(int[] arr) {
-        boolean checkOne = false;
-        boolean checkTwo = false;
+        // не понимаю как компактно добавить проверки на то, что массив может быть пустой,
+        // или с одинаковыми элементами, или с повторяющимися
+        boolean checkRegular = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Выберите операцию для проверки: 1 - проверить, что все элементы массива идут в порядке убывания; " +
                 "2 - проверить, что все элементы массива идут в порядке возрастания.");
         int result = scanner.nextInt();
         if (result == 1) {
-            for (int i = 1; i < arr.length - 1; i++) {
-                if (arr[i] <= arr[i - 1]) {
-                    checkOne = true;
-                } else {
-                    checkOne = false;
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] >= arr[i + 1]) {
+                    checkRegular = true;
                 }
             }
-
-            if(checkOne == true && arr[0] >= arr [1]) {
+            if (checkRegular == true) {
                 System.out.println("Элементы в массиве расположены в порядке убывания.");
-            } else {
-                System.out.println("Массив не упорядочен.");
             }
         }
 
         if (result == 2) {
-            for (int i = 1; i < arr.length - 1; i++) {
-                if (arr[i] >= arr[i - 1]) {
-                    checkTwo = true;
-                } else {
-                    checkTwo = false;
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] <= arr[i + 1]) {
+                    checkRegular = true;
                 }
             }
-
-            if(checkTwo == true && arr[0] <= arr[1]) {
+            if (checkRegular == true) {
                 System.out.println("Элементы в массиве расположены в порядке возрастания.");
-            } else {
-                System.out.println("Массив не упорядочен.");
             }
         }
     }
 
     public static void flipArray(int[] arr) {
-        int[] flipArr = new int[arr.length];
-        for(int i = 0; i < arr.length; i++) {
-            flipArr[arr.length - 1 - i] = arr[i];
-        }
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = flipArr[i];
+        //int[] flipArr = new int[arr.length];
+        for(int i = 0; i < arr.length / 2; i++) {
+            int num = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = num;
         }
         System.out.println(Arrays.toString(arr));
     }
