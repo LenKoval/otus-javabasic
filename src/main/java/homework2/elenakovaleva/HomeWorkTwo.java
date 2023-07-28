@@ -21,7 +21,7 @@ public class HomeWorkTwo {
         int[] array3 = {1, 7, 3, 4};
         sumArraysAndPrint(array1, array2, array3);
         checkArr(array1);
-        askUserAndCheckNumbers(array3);
+        askUserAndCheckNumbers(array2);
         flipArray(array3);
 
     }
@@ -140,18 +140,17 @@ public class HomeWorkTwo {
     }
 
     public static void askUserAndCheckNumbers(int[] arr) {
-        // не понимаю как компактно добавить проверки на то, что массив может быть пустой,
-        // или с одинаковыми элементами, или с повторяющимися
-        boolean checkRegular = false;
+        // if (arr[i] - (arr[i + 1] + 1) == 0) условие для строгой проверки
+        // for (int i = 0; i < arr.length - 1 && arr[i] < arr[i + 1]; i++)
+        boolean checkRegular = true;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Выберите операцию для проверки: 1 - проверить, что все элементы массива идут в порядке убывания; " +
                 "2 - проверить, что все элементы массива идут в порядке возрастания.");
         int result = scanner.nextInt();
         if (result == 1) {
             for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] - (arr[i + 1] + 1) == 0) {
-                    checkRegular = true;
-                } else {
+                if (arr[i] < arr[i + 1]) {
+                    checkRegular = false;
                     break;
                 }
             }
@@ -162,9 +161,8 @@ public class HomeWorkTwo {
 
         if (result == 2) {
             for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] - (arr[i + 1] - 1) == 0) {
-                    checkRegular = true;
-                } else {
+                if (arr[i] > arr[i + 1]) {
+                    checkRegular = false;
                     break;
                 }
             }
