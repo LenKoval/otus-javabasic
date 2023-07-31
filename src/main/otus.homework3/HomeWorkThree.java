@@ -4,15 +4,14 @@ public class HomeWorkThree {
     public static void main(String[] args) {
         int[][] arr1 = {{0, 2}, {3, 4}};
         int[][] arr2 = {{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}};
-        int[][] arr3 = {{2, 5, 27}, {2, 16, 8}, {32, 6, 7}};
-        int[][] arr4 = {{1}, {1}, {1}};
+        int[][] arr3 = {{2, 0, 27}, {2, 1, 8}, {32, 0, 7}};
+        int[][] arr4 = {{1}, {0}};
         int number = 5;
         System.out.println("Сумма элементов массива: " + sumOfPositiveElements(arr1));
         System.out.println();
         printSquare(number);
-        splitArray(arr2);
+        zeroDiagonal(arr2);
         System.out.println("Максимальный элемент массива: " + findMax(arr3));
-        // следующие два метода с другим массивом не работают, нужно добавлять проверку после первого for?
         System.out.println(sumElementStr(arr3));
         System.out.println(sumElementClm(arr3));
 
@@ -40,7 +39,7 @@ public class HomeWorkThree {
         System.out.println();
     }
 
-    public static int[][] splitArray(int[][] arr) {
+    public static int[][] zeroDiagonal(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 if (j == i || j == arr.length - 1 - i) {
@@ -68,30 +67,27 @@ public class HomeWorkThree {
 
     public static int sumElementStr(int[][] arr) {
         int sumElementStr = 0;
-        for (int i = 0; i < arr.length; i++) {
+        if (arr.length < 2) {
+            return -1;
+        }
+        for (int i = 0; i < 1; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] >= 1) {
-                    sumElementStr += arr[1][j];
-                } else {
-                    return -1;
-                }
+                sumElementStr += arr[1][j];
             }
-            break;
         }
         return sumElementStr;
     }
 
+
+
     public static int sumElementClm(int[][] arr) {
         int sumElementClm = 0;
+
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                if (arr.length >= 1) {
-                    sumElementClm += arr[i][1];
-                } else {
-                    return -1;
-                }
-                break;
+            if(arr[0].length < 2) {
+                return -1;
             }
+             sumElementClm += arr[i][1];
         }
         return sumElementClm;
     }
