@@ -70,11 +70,9 @@ public class HomeWorkThree {
         if (arr.length < 2) {
             return -1;
         }
-        for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                sumElementStr += arr[1][j];
+        for (int i = 0; i < arr.length - 1; i++) {
+                sumElementStr += arr[1][i];
             }
-        }
         return sumElementStr;
     }
 
@@ -82,11 +80,11 @@ public class HomeWorkThree {
 
     public static int sumElementClm(int[][] arr) {
         int sumElementClm = 0;
+        if (arr[0].length < 2) {
+            return -1;
+        }
 
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[0].length < 2) {
-                return -1;
-            }
+        for (int i = 0; i < arr.length - 1; i++) {
              sumElementClm += arr[i][1];
         }
         return sumElementClm;
