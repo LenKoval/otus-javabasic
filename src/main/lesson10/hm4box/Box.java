@@ -34,7 +34,7 @@ public class Box {
     }
 
     public void putIn(String item) {
-        if (contentsBox == null) {
+        if (contentsBox == null && !condition) {
             contentsBox = item;
             System.out.println("В коробку добавлен предмет " + contentsBox);
         } else {
