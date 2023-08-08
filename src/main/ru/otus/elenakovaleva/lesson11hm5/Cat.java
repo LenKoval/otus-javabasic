@@ -13,13 +13,13 @@ public class Cat extends Animal {
 
     @Override
     public int swim(int distance) {
-        System.out.println(getName() + " плавать не умеет.");
+        System.out.println(name + " плавать не умеет.");
         return 0;
     }
 
     @Override
     public void info() {
-        System.out.println("Имя: " + getName() + "\nСкорость бега: " + getSpeedRun()+
-                "\nВыносливость: " + getEndurance() + "ед.");
+        System.out.println("Имя: " + name + "\nСкорость бега: " + speedRun +
+                "\nВыносливость: " + endurance + "ед.");
     }
 }

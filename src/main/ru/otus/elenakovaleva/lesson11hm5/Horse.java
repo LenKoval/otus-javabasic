@@ -14,15 +14,15 @@ public class Horse extends Animal {
     @Override
     public int swim(int distance) {
         int time;
-        if(getEndurance() > distance * 4 || getEndurance() == distance * 4) {
-            setEndurance(getEndurance() - (distance * 4));
-            time = distance / getSpeedSwim();
+        if(endurance > distance * 4 || endurance == distance * 4) {
+            endurance -= (distance * 4);
+            time = distance / speedSwim;
         } else {
-            setEndurance(0);
-            System.out.println("У животного " + getName() +" появилось состояние усталости.");
+            endurance = 0;
+            System.out.println("У животного " + name +" появилось состояние усталости.");
             return -1;
         }
-        System.out.println(getName() + " проплыл " + distance + "м. за " + time + "с. и потратил " + (distance * 4) + " ед. выносливости.");
+        System.out.println(name + " проплыл " + distance + "м. за " + time + "с. и потратил " + (distance * 4) + " ед. выносливости.");
         return time;
     }
 

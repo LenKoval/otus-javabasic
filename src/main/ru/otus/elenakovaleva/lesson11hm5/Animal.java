@@ -1,10 +1,10 @@
 package ru.otus.elenakovaleva.lesson11hm5;
 
 public class Animal {
-    private String name;
-    private int speedRun;
-    private int speedSwim;
-    private int endurance;
+    protected String name;
+    protected int speedRun;
+    protected int speedSwim;
+    protected int endurance;
 
     public Animal(String name, int speedRun, int speedSwim, int endurance) {
         this.name = name;
@@ -13,30 +13,10 @@ public class Animal {
         this.endurance = endurance;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getSpeedRun() {
-        return speedRun;
-    }
-
-    public int getSpeedSwim() {
-        return speedSwim;
-    }
-
-    public int getEndurance() {
-        return endurance;
-    }
-
-    public void setEndurance(int endurance) {
-        this.endurance = endurance;
-    }
-
     public int run(int distance) {
         int time;
         if(endurance > distance || endurance == distance) {
-            endurance = endurance - distance;
+            endurance -= distance;
             time = distance / speedRun;
         } else {
             endurance = 0;
@@ -50,7 +30,7 @@ public class Animal {
     public int swim(int distance) {
         int time;
         if(endurance > distance * 2 || endurance == distance * 2) {
-            endurance = endurance - (distance * 2);
+            endurance -= (distance * 2);
             time = distance / speedSwim;
         } else {
             endurance = 0;
