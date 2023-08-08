@@ -8,7 +8,7 @@ public class Main {
         box1.changeColor("черный");
         box1.putIn("лампа");
         box1.printInfo();
-        box1.closeBox();
+        box1.close();
         box1.printInfo();
     }
 

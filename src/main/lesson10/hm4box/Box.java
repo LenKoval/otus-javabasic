@@ -14,14 +14,14 @@ public class Box {
         this.contentsBox = contentsBox;
     }
 
-    public void closeBox() {
+    public void close() {
         if(condition) {
             condition = false;
             System.out.println("Коробка закрыта.");
         }
     }
 
-    public void openBox() {
+    public void open() {
         if(!condition){
             condition = true;
             System.out.println("Коробка открыта.");
@@ -57,8 +57,7 @@ public class Box {
         String conditionInfo = null;
         if (condition) {
             conditionInfo = "Коробка открыта.";
-        }
-        if (!condition) {
+        } else {
             conditionInfo = "Коробка закрыта.";
         }
         System.out.println("Размеры коробки: " + "\nдлина: " + length + ", ширина: " + wight + ", высота: " + height +
