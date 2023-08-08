@@ -69,26 +69,13 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.homework2.ElenaKovaleva.HomeWorkTwo">
+  <component name="RunManager" selected="Application.lesson10.hm4box.Main">
     <configuration name="HomeWorkTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="otus.Kovaleva.HomeWorkTwo.HomeWorkTwo" />
       <module name="JavaBasicProject" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="otus.Kovaleva.HomeWorkTwo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.otus.ElenaKovaleva.Main" />
-      <module name="JavaBasicProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.otus.ElenaKovaleva.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,12 +109,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="lesson10.hm4.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson10.hm4.Main" />
+      <module name="JavaBasicProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson10.hm4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lesson10.hm4box.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson10.hm4box.Main" />
+      <module name="JavaBasicProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson10.hm4box.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.lesson10.hm4box.Main" />
+        <item itemvalue="Application.lesson10.hm4.Main" />
         <item itemvalue="Application.homework2.ElenaKovaleva.HomeWorkTwo" />
         <item itemvalue="Application.homework3.ElenaKovaleva.HomeWorkTwo" />
         <item itemvalue="Application.HomeWorkTwo" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
