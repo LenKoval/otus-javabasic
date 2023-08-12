@@ -8,7 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689970682731</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="git commit -m 'дз6урок12 выполнено'">
+      <created>1691849525866</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691849525866</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -230,6 +239,7 @@
     <MESSAGE value="ДЗ-1 исправлено 3" />
     <MESSAGE value="ДЗ-2 исправлено" />
     <MESSAGE value="ДЗ-2 исправлено2" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ-2 исправлено2" />
+    <MESSAGE value="git commit -m 'дз6урок12 выполнено'" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit -m 'дз6урок12 выполнено'" />
   </component>
 </project>

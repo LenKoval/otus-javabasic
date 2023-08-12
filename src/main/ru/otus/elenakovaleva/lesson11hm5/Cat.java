@@ -2,13 +2,8 @@ package ru.otus.elenakovaleva.lesson11hm5;
 
 public class Cat extends Animal {
 
-    public Cat(String name, int speedRun, int speedSwim, int endurance) {
-        super(name, speedRun, speedSwim, endurance);
-    }
-
-    @Override
-    public int run(int distance) {
-        return super.run(distance);
+    public Cat(String name, int speedRun, int speedSwim, int endurance, int countEndurSwim) {
+        super(name, speedRun, speedSwim, endurance, countEndurSwim);
     }
 
     @Override
