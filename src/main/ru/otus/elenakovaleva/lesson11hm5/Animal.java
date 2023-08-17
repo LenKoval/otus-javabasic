@@ -17,31 +17,27 @@ public class Animal {
     }
 
     public int run(int distance) {
-        int time;
-        if(endurance >= distance) {
-            endurance -= distance;
-            time = distance / speedRun;
-        } else {
+        if (endurance < distance) {
             endurance = 0;
             tired = true;
             System.out.println("У животного " + name +" появилось состояние усталости.");
             return -1;
         }
+        endurance -= distance;
+        int time = distance / speedRun;
         System.out.println(name + " пробежал " + distance + "м. за " + time + "c. и потратил " + distance + "ед. выносливости.");
         return time;
     }
 
     public int swim(int distance) {
-        int time;
-        if(endurance >= distance * countEndurSwim) {
-            endurance -= (distance * countEndurSwim);
-            time = distance / speedSwim;
-        } else {
+        if (endurance < distance * countEndurSwim) {
             endurance = 0;
             tired = true;
             System.out.println("У животного " + name +" появилось состояние усталости.");
             return -1;
         }
+        endurance -= distance * countEndurSwim;
+        int time = distance / speedSwim;
         System.out.println(name + " проплыл " + distance + "м. за " + time + "с. и потратил " + (distance * 2) + " ед. выносливости.");
         return time;
     }

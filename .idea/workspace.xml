@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="git commit -m 'исправлены методы сумма строки/колонки'">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson3hm1" />
+        <entry key="$PROJECT_DIR$" value="lesson10/homework4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
