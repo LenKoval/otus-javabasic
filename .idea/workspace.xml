@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="git commit -m 'исправлен putIn'">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Horse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson11hm5/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +74,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.lesson10.hm4box.Main">
+  <component name="RunManager" selected="Application.ru.otus.elenakovaleva.lesson11hm5.Main">
     <configuration name="HomeWorkTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="otus.Kovaleva.HomeWorkTwo.HomeWorkTwo" />
       <module name="JavaBasicProject" />
@@ -123,11 +128,16 @@
       </method>
     </configuration>
     <configuration name="lesson10.hm4box.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson10.hm4box.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ru.otus.elenakovaleva.lesson11hm5.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.otus.elenakovaleva.lesson11hm5.Main" />
       <module name="JavaBasicProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson10.hm4box.*" />
+          <option name="PATTERN" value="ru.otus.elenakovaleva.lesson11hm5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,6 +149,7 @@
       <list>
         <item itemvalue="Application.lesson10.hm4box.Main" />
         <item itemvalue="Application.lesson10.hm4.Main" />
+        <item itemvalue="Application.ru.otus.elenakovaleva.lesson11hm5.Main" />
         <item itemvalue="Application.homework2.ElenaKovaleva.HomeWorkTwo" />
         <item itemvalue="Application.homework3.ElenaKovaleva.HomeWorkTwo" />
         <item itemvalue="Application.HomeWorkTwo" />
@@ -217,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689970682731</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="git commit -m 'дз6урок12 выполнено'">
+      <created>1691849525866</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691849525866</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -228,6 +246,7 @@
     <MESSAGE value="ДЗ-1 исправлено 3" />
     <MESSAGE value="ДЗ-2 исправлено" />
     <MESSAGE value="ДЗ-2 исправлено2" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ-2 исправлено2" />
+    <MESSAGE value="git commit -m 'дз6урок12 выполнено'" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit -m 'дз6урок12 выполнено'" />
   </component>
 </project>
