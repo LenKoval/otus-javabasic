@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="git commit -m 'исправлен putIn'">
+    <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson10/homework4" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -139,8 +139,8 @@
         <item itemvalue="Application.MainApp" />
         <item itemvalue="Application.lesson10.hm4box.Main" />
         <item itemvalue="Application.lesson10.hm4.Main" />
-        <item itemvalue="Application.homework2.ElenaKovaleva.HomeWorkTwo" />
         <item itemvalue="Application.homework3.ElenaKovaleva.HomeWorkTwo" />
+        <item itemvalue="Application.homework2.ElenaKovaleva.HomeWorkTwo" />
       </list>
     </recent_temporary>
   </component>
@@ -216,19 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689970682731</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="git commit -m 'дз6урок12 выполнено'">
+      <created>1691849525866</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691849525866</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
@@ -238,6 +234,7 @@
     <MESSAGE value="ДЗ-1 исправлено 3" />
     <MESSAGE value="ДЗ-2 исправлено" />
     <MESSAGE value="ДЗ-2 исправлено2" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ-2 исправлено2" />
+    <MESSAGE value="git commit -m 'дз6урок12 выполнено'" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit -m 'дз6урок12 выполнено'" />
   </component>
 </project>
