@@ -12,5 +12,8 @@ public class MainApp {
             cats[i].eat(plate);
             cats[i].info();
         }
+        plate.infoPlate();
+        plate.addFood(500);
+        plate.infoPlate();
     }
 }

@@ -1,9 +1,9 @@
 package ru.otus.elenakovaleva.lesson12hm6;
 
 public class Cat {
-    protected String name;
-    protected int appetite;
-    protected boolean fullness;
+    private String name;
+    private int appetite;
+    private boolean fullness;
 
     public Cat(String name, int appetite, boolean fullness) {
         this.name = name;
@@ -12,13 +12,13 @@ public class Cat {
     }
 
     protected void eat(Plate plate) {
-        if(plate.currentAmountFood > appetite) {
+        if(plate.getCurrentAmountFood() > appetite) {
             fullness = plate.decreaseFood(appetite);
         }
     }
 
     public void info() {
-        if (fullness == true) {
+        if (fullness) {
             System.out.println("Кот " + name + " сыт.");
         } else {
             System.out.println("Кот " + name + " голоден");
