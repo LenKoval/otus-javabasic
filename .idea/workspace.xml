@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="git commit -m 'commit'">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson12hm6/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson12hm6/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson12hm6/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson12hm6/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson12hm6/Plate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson12hm6/Plate.java" afterDir="false" />
-    </list>
+    <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="git commit -m 'дз6урок12 исправлено'" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692250571165</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="git commit -m 'дз6урок12 исправлено'">
+      <created>1692343113476</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692343113476</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -246,6 +248,7 @@
     <MESSAGE value="ДЗ-2 исправлено2" />
     <MESSAGE value="git commit -m 'дз6урок12 выполнено'" />
     <MESSAGE value="git commit -m 'commit'" />
-    <option name="LAST_COMMIT_MESSAGE" value="git commit -m 'commit'" />
+    <MESSAGE value="git commit -m 'дз6урок12 исправлено'" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit -m 'дз6урок12 исправлено'" />
   </component>
 </project>
