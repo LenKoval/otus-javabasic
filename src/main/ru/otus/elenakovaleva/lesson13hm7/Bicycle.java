@@ -2,6 +2,7 @@ package ru.otus.elenakovaleva.lesson13hm7;
 
 public class Bicycle implements Moveable{
     private String name;
+    private final Area[] areas = {Area.SWAMP};
 
     public Bicycle(String name) {
         this.name = name;
@@ -9,10 +10,13 @@ public class Bicycle implements Moveable{
 
     @Override
     public void move(int distance, Area area, Human human) {
-        if (Area.SWAMP.equals(area)) {
-            System.out.println("Велосипед не едет по заданной местности");
+        for (int i = 0; i < areas.length; i++) {
+            if (areas[i] == area) {
+                System.out.println(name + " не едет по заданной местности");
+                return;
+            }
         }
-        human.setPowerHuman(human.getPowerHuman() - distance);
+        human.diminishPower(distance);
         System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние" +
                 distance + " сил осталось " + human.getPowerHuman());
     }

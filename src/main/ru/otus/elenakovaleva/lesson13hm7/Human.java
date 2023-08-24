@@ -1,6 +1,6 @@
 package ru.otus.elenakovaleva.lesson13hm7;
 
-public class Human implements Useable {
+public class Human implements Driver {
     private String name;
     private Moveable currentTransport;
     private int powerHuman;
@@ -19,30 +19,24 @@ public class Human implements Useable {
         return powerHuman;
     }
 
-    public void setPowerHuman(int powerHuman) {
-        if (powerHuman >= 0) {
-            this.powerHuman = powerHuman;
-        }
-    }
-
-    protected void transfer(int distance, Area area, Moveable moveable, Human human) {
-        if (moveable == null) {
+    protected void transfer(int distance, Area area) {
+        if (currentTransport == null) {
             walk(distance, area);
             return;
         }
-        if (moveable != currentTransport) {
-            System.out.println(name + " использует другой транспорт.");
-            return;
-        }
-        moveable.move(distance, area, human);
+        currentTransport.move(distance, area, this);
     }
     protected void walk(int distance, Area area) {
         if (powerHuman >= distance) {
-            powerHuman -= distance;
+            diminishPower(distance);
             System.out.println(name + " прошел " + distance + " по " + area.toString() + " сил осталось " + powerHuman);
-            return;
+        } else {
+            System.out.println("У " + name + " не хватает сил.");
         }
-        System.out.println("У " + name + " не хватает сил.");
+    }
+
+    protected void diminishPower(int distance) {
+        powerHuman -= distance;
     }
 
     @Override

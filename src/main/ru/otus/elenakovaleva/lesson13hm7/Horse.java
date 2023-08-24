@@ -3,6 +3,7 @@ package ru.otus.elenakovaleva.lesson13hm7;
 public class Horse implements Moveable {
     private String name;
     private int power;
+    private final Area[] areas = {Area.SWAMP};
 
     public Horse(String name, int power) {
         this.name = name;
@@ -11,15 +12,18 @@ public class Horse implements Moveable {
 
     @Override
     public void move(int distance, Area area, Human human) {
-        if (Area.SWAMP.equals(area)) {
-            System.out.println("Лошадь не передвигается по заданной местности");
+        for (int i = 0; i < areas.length; i++) {
+            if (areas[i] == area) {
+                System.out.println(name + " не передвигается по заданной местности.");
+                return;
+            }
         }
         if (power >= distance) {
             power -= distance;
             System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние" +
                     distance + " сил осталось " + power);
         } else {
-            System.out.println(name + " не осталось сил.");
+            System.out.println(name + " не хватает сил.");
         }
     }
 

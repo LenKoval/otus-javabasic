@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="дз7урок13 выполнено">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Bicycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Bicycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Useable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +76,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ru.otus.elenakovaleva.lesson11hm5.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="HomeWorkTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="otus.Kovaleva.HomeWorkTwo.HomeWorkTwo" />
       <module name="JavaBasicProject" />
@@ -84,12 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="homework3.ElenaKovaleva.HomeWorkTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework3.ElenaKovaleva.HomeWorkTwo" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.otus.elenakovaleva.lesson13hm7.Main" />
       <module name="JavaBasicProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework3.ElenaKovaleva.*" />
+          <option name="PATTERN" value="ru.otus.elenakovaleva.lesson13hm7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ru.otus.elenakovaleva.lesson11hm5.Main" />
         <item itemvalue="Application.lesson10.hm4box.Main" />
         <item itemvalue="Application.lesson10.hm4.Main" />
         <item itemvalue="Application.HomeWorkTwo" />
-        <item itemvalue="Application.homework3.ElenaKovaleva.HomeWorkTwo" />
       </list>
     </recent_temporary>
   </component>
