@@ -3,7 +3,7 @@ package ru.otus.elenakovaleva.lesson13hm7;
 public class Car implements Moveable {
     private String name;
     private int petrol;
-    private final Area[] areas = {Area.FOREST, Area.SWAMP};
+    private static final Area[] areas = {Area.FOREST, Area.SWAMP};
 
     public Car(String name, int petrol) {
         this.name = name;

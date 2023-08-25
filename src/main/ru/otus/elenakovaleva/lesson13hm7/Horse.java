@@ -3,7 +3,7 @@ package ru.otus.elenakovaleva.lesson13hm7;
 public class Horse implements Moveable {
     private String name;
     private int power;
-    private final Area[] areas = {Area.SWAMP};
+    private static final Area[] areas = {Area.SWAMP};
 
     public Horse(String name, int power) {
         this.name = name;

@@ -2,7 +2,7 @@ package ru.otus.elenakovaleva.lesson13hm7;
 
 public class Bicycle implements Moveable{
     private String name;
-    private final Area[] areas = {Area.SWAMP};
+    private static final Area[] areas = {Area.SWAMP};
 
     public Bicycle(String name) {
         this.name = name;
