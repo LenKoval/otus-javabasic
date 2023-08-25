@@ -10,14 +10,15 @@ public class Rover implements Moveable{
     }
 
     @Override
-    public void move(int distance, Area area, Human human) {
-        if (petrol >= distance) {
-            petrol -= distance;
-            System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние" +
-                    distance + " бензина осталось " + petrol);
-        } else {
+    public boolean move(int distance, Area area, Human human) {
+        if (petrol < distance) {
             System.out.println(name + " не хватает бензина.");
+            return false;
         }
+        petrol -= distance;
+        System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние" +
+                    distance + " бензина осталось " + petrol);
+        return true;
     }
 
     @Override

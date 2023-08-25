@@ -11,20 +11,21 @@ public class Car implements Moveable {
     }
 
     @Override
-    public void move(int distance, Area area, Human human) {
+    public boolean move(int distance, Area area, Human human) {
         for (int i = 0; i < areas.length; i++) {
             if (areas[i] == area) {
                 System.out.println(name + " не едет по заданной местности.");
-                return;
+                return false;
             }
         }
-        if (petrol >= distance) {
-            petrol -= distance;
-            System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние " +
-                        distance + " бензина осталось " + petrol);
-        } else {
+        if (petrol < distance) {
             System.out.println(name + " не хватает бензина: " + petrol);
+            return false;
         }
+        petrol -= distance;
+        System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние " +
+                        distance + " бензина осталось " + petrol);
+        return true;
     }
 
     @Override

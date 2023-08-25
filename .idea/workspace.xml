@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="дз7урок13 исправлено" />
+    <list default="true" id="8ac96c66-078f-4b6c-abac-f5381394229d" name="Changes" comment="дз7урок13 исправлен массив areas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Bicycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Bicycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ru/otus/elenakovaleva/lesson13hm7/Rover.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692859280617</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="дз7урок13 исправлен массив areas">
+      <created>1692946991781</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692946991781</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +261,7 @@
     <MESSAGE value="ДЗ-2 исправлено2" />
     <MESSAGE value="git commit -m 'дз6урок12 выполнено'" />
     <MESSAGE value="дз7урок13 исправлено" />
-    <option name="LAST_COMMIT_MESSAGE" value="дз7урок13 исправлено" />
+    <MESSAGE value="дз7урок13 исправлен массив areas" />
+    <option name="LAST_COMMIT_MESSAGE" value="дз7урок13 исправлен массив areas" />
   </component>
 </project>

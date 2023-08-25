@@ -21,18 +21,19 @@ public class Human implements Driver {
 
     protected void transfer(int distance, Area area) {
         if (currentTransport == null) {
-            walk(distance, area);
+            System.out.println(walk(distance, area));
             return;
         }
-        currentTransport.move(distance, area, this);
+        System.out.println(currentTransport.move(distance, area, this));
     }
-    protected void walk(int distance, Area area) {
-        if (powerHuman >= distance) {
-            diminishPower(distance);
-            System.out.println(name + " прошел " + distance + " по " + area.toString() + " сил осталось " + powerHuman);
-        } else {
+    protected boolean walk(int distance, Area area) {
+        if (powerHuman < distance) {
             System.out.println("У " + name + " не хватает сил.");
+            return false;
         }
+        diminishPower(distance);
+        System.out.println(name + " прошел " + distance + " по " + area.toString() + " сил осталось " + powerHuman);
+        return true;
     }
 
     protected void diminishPower(int distance) {

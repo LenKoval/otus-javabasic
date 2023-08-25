@@ -9,16 +9,17 @@ public class Bicycle implements Moveable{
     }
 
     @Override
-    public void move(int distance, Area area, Human human) {
+    public boolean move(int distance, Area area, Human human) {
         for (int i = 0; i < areas.length; i++) {
             if (areas[i] == area) {
                 System.out.println(name + " не едет по заданной местности");
-                return;
+                return false;
             }
         }
         human.diminishPower(distance);
         System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние" +
                 distance + " сил осталось " + human.getPowerHuman());
+        return true;
     }
 
     @Override

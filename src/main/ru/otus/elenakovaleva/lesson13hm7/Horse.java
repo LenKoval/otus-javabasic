@@ -11,20 +11,21 @@ public class Horse implements Moveable {
     }
 
     @Override
-    public void move(int distance, Area area, Human human) {
+    public boolean move(int distance, Area area, Human human) {
         for (int i = 0; i < areas.length; i++) {
             if (areas[i] == area) {
                 System.out.println(name + " не передвигается по заданной местности.");
-                return;
+                return false;
             }
         }
-        if (power >= distance) {
-            power -= distance;
-            System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние" +
-                    distance + " сил осталось " + power);
-        } else {
+        if (power < distance) {
             System.out.println(name + " не хватает сил.");
+            return false;
         }
+        power -= distance;
+        System.out.println(human.getName() + " проехал по " + area.toString() + " на " + name + " расстояние" +
+                    distance + " сил осталось " + power);
+        return true;
     }
 
     @Override
