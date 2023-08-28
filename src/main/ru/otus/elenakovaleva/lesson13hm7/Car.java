@@ -3,7 +3,7 @@ package ru.otus.elenakovaleva.lesson13hm7;
 public class Car implements Moveable {
     private String name;
     private int petrol;
-    private static final Area[] areas = {Area.FOREST, Area.SWAMP};
+    private static final Area[] AREAS = {Area.FOREST, Area.SWAMP};
 
     public Car(String name, int petrol) {
         this.name = name;
@@ -12,8 +12,8 @@ public class Car implements Moveable {
 
     @Override
     public boolean move(int distance, Area area, Human human) {
-        for (int i = 0; i < areas.length; i++) {
-            if (areas[i] == area) {
+        for (int i = 0; i < AREAS.length; i++) {
+            if (AREAS[i] == area) {
                 System.out.println(name + " не едет по заданной местности.");
                 return false;
             }

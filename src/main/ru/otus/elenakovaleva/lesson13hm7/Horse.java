@@ -3,7 +3,7 @@ package ru.otus.elenakovaleva.lesson13hm7;
 public class Horse implements Moveable {
     private String name;
     private int power;
-    private static final Area[] areas = {Area.SWAMP};
+    private static final Area[] AREAS = {Area.SWAMP};
 
     public Horse(String name, int power) {
         this.name = name;
@@ -12,8 +12,8 @@ public class Horse implements Moveable {
 
     @Override
     public boolean move(int distance, Area area, Human human) {
-        for (int i = 0; i < areas.length; i++) {
-            if (areas[i] == area) {
+        for (int i = 0; i < AREAS.length; i++) {
+            if (AREAS[i] == area) {
                 System.out.println(name + " не передвигается по заданной местности.");
                 return false;
             }
