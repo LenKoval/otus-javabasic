@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
  HEAD
+HEAD
+lesson11/hm5
   <component name="ProjectRootManager" version="2" languageLevel="JDK_19" project-jdk-name="11" project-jdk-type="JavaSDK" />
-=======
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -14,5 +15,5 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
->>>>>>> 2ad29f2bf788ce91bcd0494f2c0951bd42e62469
+2ad29f2bf788ce91bcd0494f2c0951bd42e62469
 </project>
