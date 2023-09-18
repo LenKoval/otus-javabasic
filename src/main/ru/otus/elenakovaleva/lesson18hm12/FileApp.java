@@ -2,23 +2,25 @@ package ru.otus.elenakovaleva.lesson18hm12;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class FileApp {
     public static void main(String[] args) {
-        File files = new File("D:\\projects\\JavaBasicProject\\src\\main\\ru\\otus\\elenakovaleva\\lesson18hm12");
-        displayAllFiles(files);
+        Path path = Path.of("src\\main\\ru\\otus\\elenakovaleva\\lesson18hm12");
+        displayAllFiles(path.toFile());
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя файла.");
-        String fileName = null;
-        String strForFile = null;
-        try (BufferedReader buf = new BufferedReader(new InputStreamReader(System.in))) {
-            fileName = buf.readLine();
+        String fileName = scanner.nextLine();
+        File file = new File(fileName);
+        if (file.exists() && file.canRead()) {
             readFile(fileName);
             System.out.println("\nВведите строку для записи в файл.");
-            strForFile = buf.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
+            String strForFile = scanner.nextLine();
+            addForFile(fileName, strForFile);
         }
-        addForFile(fileName, strForFile);
+        scanner.close();
     }
 
     public static void displayAllFiles(File dir) {
@@ -35,12 +37,16 @@ public class FileApp {
     }
 
     public static void readFile(String fileName) {
-        try (BufferedInputStream in = new BufferedInputStream(new FileInputStream("D:\\projects\\JavaBasicProject\\src\\main\\ru\\otus\\elenakovaleva\\lesson18hm12\\" + fileName))) {
-            int n = in.read();
-            while (n != -1) {
-                System.out.print((char) n);
-                n = in.read();
+        try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(fileName))) {
+            byte[] buf = new byte[256];
+            int n;
+            while ((n = in.read(buf)) > 0) {
+                if (n < 256) {
+                    buf = Arrays.copyOf(buf, n);
+                }
             }
+            String strFile = new String(buf, StandardCharsets.UTF_8);
+            System.out.print(strFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
