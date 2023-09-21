@@ -4,61 +4,69 @@ import java.util.Collections;
 import java.util.List;
 
 public class Tree implements SearchTree {
-    private int val;
-    private Tree left;
-    private Tree right;
+    public Node root;
+    public List<Integer> list;
 
-    public Tree(int val) {
-        this.val = val;
-        this.left = null;
-        this.right = null;
+    public Tree(List<Integer> list) {
+        this.list = list;
+    }
+
+    public Tree(Node root) {
+        this.root = root;
     }
 
     public Tree() {
-
     }
 
-    public int getVal() {
-        return val;
-    }
-
-    public Tree getLeft() {
-        return left;
-    }
-
-    public Tree getRight() {
-        return right;
-    }
-
-    public static Tree createTreeFromSortedList(List<Integer> list, int start, int end) {
+    /*public Node createTreeFromSortedList(List<Integer> sortedList, int start, int end) {
+            if (start > end) {
+                return null;
+            }
+            Node current = root;
+            int mid = (start + end) / 2;
+            current = sortedList.get(mid);
+            root.left = createTreeFromSortedList(sortedList, start, mid - 1);
+            root.right = createTreeFromSortedList(sortedList, mid + 1, end);
+            return root;
+        }*/
+    private Node insert(List<Integer> list, int start, int end) {
         if (start > end) {
             return null;
         }
         int mid = (start + end) / 2;
-        Tree node = new Tree(list.get(mid));
-        node.left = createTreeFromSortedList(list, start, mid - 1);
-        node.right = createTreeFromSortedList(list, mid + 1, end);
-        return node;
+        root = new Node(list.get(mid));
+        root.left = insert(list, start, mid - 1);
+        root.right = insert(list, mid + 1, end);
+        return root;
+    }
+
+    public Node createTreeFromSortedList(List<Integer> list) {
+        if(list.isEmpty()) {
+            return null;
+        }
+        return insert(list, 0, list.size() - 1);
     }
 
     @Override
-    public boolean find(Tree tree, Integer element) {
-        if (tree == null) {
+    public boolean find(Integer element) {
+        if (root == null) {
             return false;
         }
-        if (tree.val == element) {
+        if (root.val == element) {
             return true;
         }
-        if(element < tree.val) {
-            return find(tree.left, element);
-        } else if (element > tree.val) {
-            return find(tree.right, element);
+        if(element < root.val) {
+            root = root.left;
+            find(element);
+        } else if (element > root.val) {
+            root = root.right;
+            find(element);
         }
         return false;
     }
 
     @Override
-    public List<Integer> getSorted(List<Integer> list) {
+    public List<Integer> getSorted() {
         Collections.sort(list);
         return list;
     }
