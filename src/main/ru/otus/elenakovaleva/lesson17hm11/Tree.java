@@ -8,36 +8,18 @@ public class Tree implements SearchTree {
     public List<Integer> list;
 
     public Tree(List<Integer> list) {
-        this.list = list;
+        Collections.sort(list);
+        root = createTreeFromSortedList(list);
     }
-
-    public Tree(Node root) {
-        this.root = root;
-    }
-
-    public Tree() {
-    }
-
-    /*public Node createTreeFromSortedList(List<Integer> sortedList, int start, int end) {
-            if (start > end) {
-                return null;
-            }
-            Node current = root;
-            int mid = (start + end) / 2;
-            current = sortedList.get(mid);
-            root.left = createTreeFromSortedList(sortedList, start, mid - 1);
-            root.right = createTreeFromSortedList(sortedList, mid + 1, end);
-            return root;
-        }*/
     private Node insert(List<Integer> list, int start, int end) {
         if (start > end) {
             return null;
         }
         int mid = (start + end) / 2;
-        root = new Node(list.get(mid));
-        root.left = insert(list, start, mid - 1);
-        root.right = insert(list, mid + 1, end);
-        return root;
+        Node node = new Node(list.get(mid));
+        node.left = insert(list, start, mid - 1);
+        node.right = insert(list, mid + 1, end);
+        return node;
     }
 
     public Node createTreeFromSortedList(List<Integer> list) {
@@ -48,26 +30,34 @@ public class Tree implements SearchTree {
     }
 
     @Override
-    public boolean find(Integer element) {
-        if (root == null) {
-            return false;
+    public Integer find(Integer element) {
+        return get(root, element);
+    }
+
+    private Integer get(Node x, Integer value) {
+        if (x == null) {
+            return null;
         }
-        if (root.val == element) {
-            return true;
+        int cmp = value.compareTo(x.val);
+        if (cmp < 0) {
+            return get(x.left, value);
+        } else if (cmp > 0) {
+            return get(x.right, value);
+        } else {
+            return x.val;
         }
-        if(element < root.val) {
-            root = root.left;
-            find(element);
-        } else if (element > root.val) {
-            root = root.right;
-            find(element);
-        }
-        return false;
     }
 
     @Override
     public List<Integer> getSorted() {
         Collections.sort(list);
         return list;
+    }
+
+    @Override
+    public String toString() {
+        return "Tree{" +
+                "root=" + root +
+                '}';
     }
 }
