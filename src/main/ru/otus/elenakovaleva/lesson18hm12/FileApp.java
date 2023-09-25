@@ -2,13 +2,17 @@ package ru.otus.elenakovaleva.lesson18hm12;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class FileApp {
     public static void main(String[] args) {
-        Path path = Path.of("src\\main\\ru\\otus\\elenakovaleva\\lesson18hm12");
+        String[] wordsPath = {"src", "main", "ru", "otus", "elenakovaleva", "lesson18hm12"};
+        String filePath = String.join(File.separator, wordsPath);
+        Path path = Path.of(filePath);
         displayAllFiles(path.toFile());
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя файла.");
@@ -19,6 +23,8 @@ public class FileApp {
             System.out.println("\nВведите строку для записи в файл.");
             String strForFile = scanner.nextLine();
             addForFile(fileName, strForFile);
+        } else {
+            System.out.println("Файл не доступен.");
         }
         scanner.close();
     }
