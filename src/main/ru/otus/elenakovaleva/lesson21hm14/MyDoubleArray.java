@@ -46,4 +46,34 @@ public class MyDoubleArray {
         }
         return arr;
     }
+
+    public double[] fillMain() {
+        for (int i =0; i < 4; i++) {
+            Thread t1 = new Thread(() -> {
+                for (int j = 0; j < arr.length / 4; j++) {
+                    arr[j] = 1.14 * Math.cos(j) * Math.sin(j * 0.2) * Math.cos(j/1.2);
+                }
+            });
+            Thread t2 = new Thread(() -> {
+                for (int j = arr.length / 4; j < arr.length / 2; j++) {
+                    arr[j] = 1.14 * Math.cos(j) * Math.sin(j * 0.2) * Math.cos(j / 1.2);
+                }
+            });
+            Thread t3 = new Thread(() -> {
+                for (int j = arr.length/2; j < arr.length - (arr.length / 4); j++) {
+                    arr[j] = 1.14 * Math.cos(j) * Math.sin(j * 0.2) * Math.cos(j/1.2);
+                }
+            });
+            Thread t4 = new Thread(() -> {
+                for (int j = arr.length - (arr.length / 4); j < arr.length; j++) {
+                    arr[j] = 1.14 * Math.cos(j) * Math.sin(j * 0.2) * Math.cos(j/1.2);
+                }
+            });
+            t1.start();
+            t2.start();
+            t3.start();
+            t4.start();
+        }
+        return arr;
+    }
 }
