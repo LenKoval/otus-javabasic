@@ -32,13 +32,25 @@ public class FruitBoxApp {
             fruitBox.addFruit(orange);
         }
 
+        //проверяем вес заполненных коробок
         System.out.println(appleBox.weight());
         System.out.println(orangeBox.weight());
         System.out.println(fruitBox.weight());
+
+        //случаи для проверки
+        Box<Apple> appleBox2 = null;
+        Apple apple = new Apple();
+        Orange orange = null;
+
+        fruitBox.addFruit(apple);
+        appleBox.addFruit(apple);
+        orangeBox.addFruit(orange); // не пройдет проверку
         System.out.println(appleBox.compare(orangeBox));
         pour(fruitBox, appleBox1);
         pour(appleBox1, appleBox);
-        //pour(appleBox1, orangeBox);
-        //pour(orangeBox, fruitBox);
+        pour(appleBox2, appleBox); // не пройдет проверку
+        pour(appleBox, appleBox); // не пройдет проверку
+        //pour(appleBox1, orangeBox); // не сработает
+        //pour(orangeBox, fruitBox); // не сработает
     }
 }
